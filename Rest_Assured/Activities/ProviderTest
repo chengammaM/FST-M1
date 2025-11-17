@@ -1,5 +1,8 @@
 package Activities;
 
+
+
+
 import au.com.dius.pact.provider.junit5.HttpTestTarget;
 import au.com.dius.pact.provider.junit5.PactVerificationContext;
 import au.com.dius.pact.provider.junit5.PactVerificationInvocationContextProvider;
@@ -28,18 +31,15 @@ public class ProviderTest {
 //    @State("POST Request")
 //    public void state1() {
 //    }
-//Run each one , one after the other not all at once , just for demo purpose we have all here 
-    //post will fail initially as all are doing it , run multiple times 
-//    
+//
 //    @State("GET Request")
 //    public void state2() {
 //    }
 //
-    @State("DELETE Request")
-    public void state3() {
-    }
-//
-//    @State("GET ALL Request")
-//    public void state4() {
+//    @State("DELETE Request")
+//    public void state3() {
 //    }
-}
+//
+    @State("GET ALL Request")
+    public void state4() {
+    }}
