@@ -1,5 +1,7 @@
 package Activities;
 
+
+
 import au.com.dius.pact.consumer.MockServer;
 import au.com.dius.pact.consumer.dsl.DslPart;
 import au.com.dius.pact.consumer.dsl.PactDslJsonArray;
@@ -53,7 +55,7 @@ public class ConsumerTest {
         // Set headers
         headers.put("Content-Type", "application/json");
         // Create the JSON body
-        DslPart resBody = new PactDslJsonBody()
+        DslPart reqResBody = new PactDslJsonBody()
                 .numberType("id", 1)
                 .stringType("firstName", "Saahil")
                 .stringType("lastName", "Sharma")
@@ -67,7 +69,7 @@ public class ConsumerTest {
                 .pathFromProviderState("/api/users/{id}", "/api/users/1")
                 .willRespondWith()
                 .status(200)
-                .body(resBody)
+                .body(reqResBody)
                 .toPact(V4Pact.class);
     }
 
